@@ -1,0 +1,15 @@
+#ignoredwebsites{
+    min-width: 600px;
+    width:auto;
+    height: 200px;
+    margin: 20px;
+}
+
+input{
+    width: 50px;
+    text-align: right;
+}
+
+body{
+    padding: 20px;
+}

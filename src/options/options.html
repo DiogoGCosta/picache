@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Picache Settings</title>
+    <link rel="stylesheet" href="../jquery-ui-1.12.0/jquery-ui.css">
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="options.css">
+    <link rel="icon" href="../img/icon.png">
+
+    <script src="../jquery-3.1.0.min.js"></script>
+    <script src="../jquery-ui-1.12.0/jquery-ui.min.js"></script>
+    <script src="../filters.js"></script>
+    <script src="options.js"></script>
+    <style>
+        #status{
+            color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+<h1>Picache Settings</h1>
+<div id="storage-size"></div>
+<div id="images-size"></div>
+<br>
+<br>
+<!--
+<h3>Delete area</h3>
+<input id="delete-width-button" type="button" value="Delete all images that have less than "/> <input id="delete-width" type="text" value="16"/> pixels <strong>width</strong>
+<br>
+<br>
+<input id="delete-height-button" type="button" value="Delete all images that have less than "/> <input id="delete-height" type="text" value="16"/> pixels <strong>height</strong>
+<br>
+<br>
+
+<h3>Ignore area</h3>
+-->
+Don't save images that have less than <input id="ignore-width" type="text" value="16"/> pixels <strong>width</strong> or <input id="ignore-height" type="text" value="16"/> pixels <strong>height</strong>
+<br>
+<br>
+Don't save images from these websites (1 per line):
+<br>
+<textarea id="ignoredwebsites"></textarea>
+<br>
+<br>
+<input type="checkbox" id="incognito"> Save images in incognito mode
+<span style="color:#716f74">(WARNING: When you see the images in the extension they can appear in your history)</span>
+<br>
+<br>
+<input type="button" value="Save" id="savesettings"/>
+<br>
+<div id="status"></div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+  "name": "Picache",
+  "description": "Keep an history of the images you browse.",
+  "version": "1.0",
+  "icons": { "16": "img/icon.png",
+    "48": "img/icon.png",
+    "128": "img/icon.png"
+  },
+  "browser_action": {
+    "default_icon": "img/icon.png",
+    "default_title": "Search past images",
+    "default_popup": "popup/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*","https://*/*"],
+      "js": ["jquery-3.1.0.min.js", "libs/jquery-observe.js", "imagesearch.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "background": {
+    "scripts": ["libs/lz-string.min.js", "processor.js"],
+    "persistent": false
+  },
+  "options_page": "options/options.html",
+  "permissions": [
+    "tabs",
+    "storage"
+  ]
+}

@@ -1,0 +1,323 @@
+body {
+    font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+    font-size: 100%;
+    background-color: aliceblue;
+    overflow-y:scroll;
+}
+.img {
+    /*width: 196px;
+    max-height: 196px;*/
+    width: auto;
+    max-width: 196px;
+    max-height: 100%;
+    vertical-align: middle;
+    display: inline-block;
+    animation: fadein 1s;
+    border-radius: 10px;
+    cursor: zoom-in;
+}
+
+.imagediv{
+    width: 196px;
+    height: 196px;
+    display: inline-block;
+    line-height: 196px;
+}
+
+
+#filter_zone{
+    position: fixed;
+    display: inline-block;
+    margin-left: -8px;
+    margin-top: -20px;
+    width: 100%;
+    background: #acb4bb linear-gradient(#c8d0d7, #a9b2b9);
+    padding-top: 5px;
+    z-index: 998;
+    text-align: center;
+    color: #1d1e25;
+    box-shadow: 5px 0px 5px#7a8188 ;
+    border-radius: 0px;
+    opacity: 1;
+}
+
+#filter_zone:hover{
+}
+
+.ui-selectmenu-menu{
+    z-index:999 !important;
+}
+
+.left-range{
+    width: 33%;
+    display: inline-block;
+    text-align: left;
+}
+.center-range{
+    width: 33%;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+}
+
+.right-range{
+    width: 33%;
+    display: inline-block;
+    text-align: right;
+}
+
+#time-range-text {
+    width: 92%;
+    display: inline-block;
+}
+#width-range-text {
+    width: 92%;
+}
+#height-range-text {
+    margin-top: 20px;
+    width: 92%;
+}
+#searchbox{
+    height: 30px;
+    width: 75%;
+    padding: 5px;
+    font-size: large;
+    border-radius: 5px;
+    text-align: left;
+    margin-top: -5px;
+}
+
+#width-range{
+    width: 90%;
+    margin:5px;
+}
+#height-range{
+    width: 90%;
+    margin:5px;
+}
+
+#time-range{
+    width: 90%;
+    margin-top:5px;
+    display: inline-block;
+    margin-bottom: 25px;
+}
+
+table{
+    width: 95%;
+    margin-left:auto;
+    margin-right:auto;
+    border-collapse:collapse;
+}
+td{
+    text-align: left;
+    /*border: 1px solid black;*/
+    padding: 5px;
+}
+#images{
+    margin-top:100px;
+    text-align: center;
+}
+
+.image{
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    vertical-align: bottom;
+    text-align: center;
+    border: 2px solid aliceblue;
+    border-radius: 10px;
+}
+
+.image .time{
+    position: absolute;
+    width: 196px;
+    height: 50px;
+    background-color: #2b2b2b;
+    color: white;
+    opacity: .85;
+    display: none;
+    margin-top: 150px;
+    animation: fadein2 150ms;
+    border-bottom-left-radius:10px;
+    border-bottom-right-radius:10px;
+}
+
+.image > .hosticon{
+    display:none;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    margin-left: 5px;
+    margin-top: 5px;
+    opacity: 1;
+    z-index: 997;
+    animation: fadein 500ms;
+}
+
+.image:hover > .hosticon{
+    display: inline-block;
+}
+.deleteicon{
+    display: none;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    margin-left: 160px;
+    margin-top: 6px;
+    opacity: 1;
+    z-index: 997;
+    animation: fadein 500ms;
+    cursor: pointer;
+}
+
+.gotolink{
+    display: none;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    margin-left: 160px;
+    margin-top: 160px;
+    opacity: 1;
+    z-index: 997;
+    animation: fadein 500ms;
+}
+
+.image:hover > .deleteicon{
+    display: inline-block;
+}
+
+.image:hover > a > .gotolink{
+    display: inline-block;
+}
+
+
+.image:hover > div{
+    display: inline-block;
+}
+
+.ui-slider-handle{
+    border-radius: 10px;
+    background-color: #eaf4ff !important;
+    height: 15px !important;
+    margin-top: -1px !important;
+    width: 15px !important;
+    cursor: ew-resize !important;
+    border-width: 0px !important;
+}
+
+.ui-slider-range{
+    background-color: #f3f4ff !important;
+
+
+}
+
+.ui-slider{
+    height: 5px !important;
+}
+
+.ui-selectmenu-button{
+    width: 90% !important;
+    display: inline-block;
+    padding: 1%;
+}
+
+#deleteimages{
+    width: 92.5%;
+    padding-left: 1%;
+    padding-right: 1%;
+    display: inline-block;
+    background-color: #fffcfc;
+    color: black;
+    border-radius: 5px;
+
+}
+
+#deleteimages:hover{
+    background-color: #ff8564;
+    font-weight: bold;
+}
+
+#no-more{
+    width:100%;
+    text-align: center;
+    font-weight: bold;
+    display: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: large;
+}
+
+#loader{
+    width:100%;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: large;
+    position: fixed;
+    bottom: 0px;
+    opacity: .4;
+}
+
+#loader img{
+    width: 200px;
+}
+
+#opensettings{
+    display: inline-block;
+    margin-top: -40px;
+}
+
+#info{
+    position: fixed;
+    width:100%;
+    height: 200px;
+    background-color: white;
+    bottom: 0;
+    z-index: 1000;
+}
+
+.hasurl{
+    border: 1px solid grey;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes fadein2 {
+    from { opacity: 0; }
+    to   { opacity: .85; }
+}
+
+@keyframes filterzone {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.tooltip {
+
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: auto;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1001;
+    top:10px;
+    left:auto;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}

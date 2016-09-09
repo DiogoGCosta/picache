@@ -1,0 +1,79 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "images.html".
+ -->
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Cached pictures</title>
+    <link rel="stylesheet" href="jquery-ui-1.12.0/jquery-ui.css">
+    <link rel="stylesheet" href="libs/featherlight.min.css">
+    <link rel="stylesheet" href="main.css">
+    <link href="https://npmcdn.com/basscss@8.0.1/css/basscss.min.css" rel="stylesheet">
+    <link rel="icon" href="img/icon.png">
+
+    <script src="jquery-3.1.0.min.js"></script>
+    <script src="jquery-ui-1.12.0/jquery-ui.min.js"></script>
+    <script src="libs/featherlight.min.js"></script>
+    <script src="filters.js"></script>
+    <script src="images.js"></script>
+  </head>
+  <body>
+  <div id="filter_zone">
+  <table>
+    <tr>
+      <td style="width:10%">
+      <img src="img/icon.png" style="width:64px;height: 64px"/>
+        <br>
+        <strong>picached</strong>
+      </td>
+      <td style="width:25%">
+          <div id="width-range-text"></div>
+          <div id="width-range"></div>
+          <div id="height-range-text"></div>
+          <div id="height-range"></div>
+      </td>
+      <td style="width:25%">
+        <div style="margin-top:5px"></div>
+        <div style="width:100%; text-align: center;">
+          <div id="time-range-text"></div>
+          <div id="time-range"></div>
+          <br>
+
+          <input id="searchbox" type="text" class="ui-widget ui-widget-content ui-corner-all" placeholder="search images">
+        </div>
+
+      </td>
+      <td style="width:25%">
+        <div style="margin-top:0px"></div>
+        <br>
+        <div style="width:100%; text-align: center;">
+        <select id="hostselect">
+          <option value="">All websites</option>
+        </select>
+        <br>
+        <br>
+
+          <button class="ui-button ui-widget ui-corner-all" id="deleteimages">Delete all images with these filters</button>
+        </div>
+      </td>
+      <td style="width:15%;text-align: right">
+        <button id="opensettings" class="ui-button ui-widget ui-corner-all" type="button" >Open settings <span class="ui-icon ui-icon-gear"></span></button>
+        <br>
+
+      </td>
+    </tr>
+  </table>
+  </div>
+
+  <br>
+  <div id="images"></div>
+  <div id="no-more">No more images to show</div>
+  <div id="loader"><img src="img/loader.gif"/></div>
+  <!--<input type="button" value="Load more" id="load-more" style="display: none; margin-left: 50%; width: 400px; height: 50px">-->
+  <div id="info" style="display:none"></div>
+  </body>
+</html>
+
